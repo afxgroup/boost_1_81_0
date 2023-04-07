@@ -1,0 +1,1 @@
+using gcc : power : /usr/bin/ppc-amigaos-g++ : <compilerflags>"-I/usr/ppc-amigaos/SDK/clib2/ -mcrt=clib2" ;
