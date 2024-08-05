@@ -10,7 +10,7 @@ import feature ;
 if ! gcc in [ feature.values <toolset> ]
 {
 #    using gcc ; 
-    using gcc : power : /usr/bin/ppc-amigaos-g++ : <cxxflags>-mcrt=clib2 <linkflags>"-mcrt=clib2 -athread=native" <cflags>-mcrt=clib2 <compilerflags>"-I/usr/ppc-amigaos/SDK/clib2/ -mcrt=clib2" ;
+    using gcc : power : /usr/bin/ppc-amigaos-g++ : <cxxflags>"-mcrt=clib4 -pthread" <linkflags>"-mcrt=clib4 -athread=native" <cflags>"-mcrt=clib4 -pthread" <compilerflags>"-I/usr/ppc-amigaos/SDK/clib4/ -mcrt=clib4" ;
 }
 
 project : default-build <toolset>gcc ;
@@ -23,10 +23,10 @@ libraries =  ;
 
 # These settings are equivalent to corresponding command-line
 # options.
-option.set prefix : /usr/ppc-amigaos/SDK/local/clib2 ;
-option.set exec-prefix : /usr/ppc-amigaos/SDK/local/clib2 ;
-option.set libdir : /usr/ppc-amigaos/SDK/local/clib2/lib ;
-option.set includedir : /usr/ppc-amigaos/SDK/local/clib2/include ;
+option.set prefix : /usr/ppc-amigaos/SDK/local/clib4 ;
+option.set exec-prefix : /usr/ppc-amigaos/SDK/local/clib4 ;
+option.set libdir : /usr/ppc-amigaos/SDK/local/clib4/lib ;
+option.set includedir : /usr/ppc-amigaos/SDK/local/clib4/include ;
 
 # Stop on first error
 option.set keep-going : false ;

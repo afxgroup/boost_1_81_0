@@ -89,7 +89,7 @@ std::string frame::name() const {
         return std::string();
     }
 
-#if !defined(BOOST_WINDOWS) && !defined(__CYGWIN__)
+#if !defined(BOOST_WINDOWS) && !defined(__CYGWIN__) && !defined(__amigaos4__)
     ::Dl_info dli;
     const bool dl_ok = !!::dladdr(const_cast<void*>(addr_), &dli); // `dladdr` on Solaris accepts nonconst addresses
     if (dl_ok && dli.dli_sname) {

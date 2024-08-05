@@ -162,7 +162,7 @@ BOOST_LOG_API get_tick_count_t get_tick_count = &get_tick_count_init;
 #endif // BOOST_USE_WINAPI_VERSION >= BOOST_WINAPI_VERSION_WIN6
 
 #elif (defined(_POSIX_TIMERS) && (_POSIX_TIMERS+0) > 0)  /* POSIX timers supported */ \
-      || defined(__GNU__) || defined(__OpenBSD__) || defined(__CloudABI__)  /* GNU Hurd, OpenBSD and Nuxi CloudABI don't support POSIX timers fully but do provide clock_gettime() */
+      || defined(__GNU__) || defined(__OpenBSD__) || defined(__CloudABI__) || defined(__amigaos4__)  /* GNU Hurd, OpenBSD and Nuxi CloudABI don't support POSIX timers fully but do provide clock_gettime() */
 
 BOOST_LOG_API int64_t duration::milliseconds() const
 {
