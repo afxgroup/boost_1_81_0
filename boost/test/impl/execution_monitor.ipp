@@ -129,7 +129,7 @@ namespace { void _set_se_translator( void* ) {} }
 
 #  endif
 
-#elif defined(BOOST_HAS_SIGACTION)
+#elif defined(BOOST_HAS_SIGACTION) && !defined(__amigaos4__)
 
 #  define BOOST_SIGACTION_BASED_SIGNAL_HANDLING
 
